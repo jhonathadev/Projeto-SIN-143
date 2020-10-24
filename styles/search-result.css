@@ -1,0 +1,132 @@
+#page-result {
+    height: 100vh;
+    width: 100vw;
+}
+
+#page-result .content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+#page-result .content header nav {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#page-result .content header nav ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 60px;
+}
+
+#page-result .content header nav ul li {
+    margin: 0 20px;
+    list-style: none;
+}
+
+#page-result .content header nav ul li.align-left {
+    margin-right: auto;
+}
+
+#page-result .content header nav ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page-result .content header nav ul li a {
+    color: white;
+    font-size: 24px;
+    transition: 400ms;
+    border: 0;
+}
+
+#page-result .content header nav ul li a:hover {
+    color: var(--violet);
+    font-size: 24px;
+    border: 0;
+}
+
+.section-title {
+    color: var(--title-color);
+    font-size: 36px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+#page-result main .content .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+#page-result .content .card + .card p {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#page-result .content .card {
+    margin: 0 30px;
+}
+
+#page-result .content .card + .card {
+    display: flex;
+    flex-direction: column;
+}
+
+#page-result .content .card + .card h1 {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+#page-result .content .card + .card select {
+    display: flex;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+}
+
+#page-result .content .card + .card .card-group {
+    display: flex;
+    align-items: center;
+}
+
+#page-result main .content .card img {
+    border-radius: 8px;
+    
+}
+
+#page-result .content button {
+    align-items: right;
+    width: 220px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    transition: 400ms;
+}
+
+#page-result .content button:hover {
+    background-color: var(--violet);
+}
+
+
+

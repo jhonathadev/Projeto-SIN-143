@@ -1,0 +1,286 @@
+:root {
+    --title-color: #33333b;
+    --primary-color: #33333b;
+    --violet: #5e17eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+html, body {
+    overflow-x: hidden;
+    background-color: #242424c9;
+}
+
+h1, h2, h3, h4, h5, h6, p, body, button {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+}
+
+#page-home {
+    height: 100vh;
+    width: 100vw;
+}
+
+#page-home .content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+#page-home .content header nav {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#page-home .content header nav ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 60px;
+}
+
+#page-home .content header nav ul li {
+    margin: 0 20px;
+    list-style: none;
+}
+
+#page-home .content header nav ul li.align-left {
+    margin-right: auto;
+}
+
+#page-home .content header nav ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page-home .content header nav ul li a {
+    color: white;
+    font-size: 24px;
+    transition: 400ms;
+    border: 0;
+}
+
+#page-home .content header nav ul li a:hover {
+    color: var(--violet);
+    font-size: 24px;
+    border: 0;
+}
+
+.section-title {
+    color: var(--title-color);
+    font-size: 36px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+#page-home .content .cards p {
+    padding: 0 30px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+#page-home main .content .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+#page-home main .content .card img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 30px;
+    border-radius: 8px;
+}
+
+
+#page-home .content form {
+    background-color: white;
+    padding: 30px;
+    width: 100%;
+}
+
+#page-home .content form fieldset {
+    border: none;
+}
+
+#page-home .content form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+#page-home .content form label {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#page-home .content form input {
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 20px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 8px;
+}
+
+#page-home .content form button {
+    width: 220px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    transition: 400ms;
+}
+
+#page-home .content form button:hover {
+    background-color: var(--violet);
+}
+
+
+#page-home .content form textarea {
+    max-width: 1040px;
+    height: 150px;
+    padding: 16px 20px;
+    font-size: 16px;
+}
+
+#page-home .content .contact-div {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+#page-home .content .contact-div .address {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+#page-home .content .contact-div .address div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#page-home .content .contact-div .address h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 60px;
+}
+
+#page-home .content .contact-div .address img {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+
+#page-home .content .contact-div .address p {
+    line-height: 24px;
+}
+
+#page-home .content .notice p {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 30px;
+}
+
+#page-home .content .accordion-box {
+    padding: 30px;
+}
+
+#page-home .content .accordion {
+    background-color: #f0f0f5;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+#page-home .content .active, .accordion:hover {
+    background-color: #c9c9cc;
+}
+
+  
+#page-home .content .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+#page-home .content .panel p {
+    padding: 20px 10px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    width: 90%;
+    max-width: 1100px;
+    height: 150px;
+    bottom: 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+footer p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+footer p span {
+    color: red;
+    font-size: 30px;
+}
+
+footer .footer-div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a img {
+    width: 50px;
+    height: 40px;
+    margin: 5px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 400ms;
+}
+
+footer a img:hover {
+    opacity: 0.8;
+}
