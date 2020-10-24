@@ -65,9 +65,8 @@ h1, h2, h3, h4, h5, h6, p, body, button {
 }
 
 #page-home .content header nav ul li img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 70%;
+    height: 100px;
 }
 
 #page-home .content header nav ul li a {
@@ -143,7 +142,7 @@ h1, h2, h3, h4, h5, h6, p, body, button {
     border-radius: 8px;
 }
 
-#page-home .content form button {
+#page-home .content form .button {
     width: 220px;
     height: 56px;
     background-color: var(--primary-color);
@@ -154,10 +153,12 @@ h1, h2, h3, h4, h5, h6, p, body, button {
     border: 0;
     margin-top: 40px;
     transition: 400ms;
+    cursor: pointer;
 }
 
-#page-home .content form button:hover {
+#page-home .content form .button:hover {
     background-color: var(--violet);
+    font-size: 20px;
 }
 
 
@@ -189,7 +190,7 @@ h1, h2, h3, h4, h5, h6, p, body, button {
 #page-home .content .contact-div .address h1 {
     text-align: center;
     font-size: 28px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 #page-home .content .contact-div .address img {
@@ -283,4 +284,6 @@ footer a img {
 
 footer a img:hover {
     opacity: 0.8;
+    width: 55px;
+    height: 45px;
 }
