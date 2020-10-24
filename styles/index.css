@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6, p, body, button {
 #page-home .content header nav ul li img {
     width: 70%;
     height: 100px;
+    padding: 5px;
 }
 
 #page-home .content header nav ul li a {

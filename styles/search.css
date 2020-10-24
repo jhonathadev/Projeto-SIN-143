@@ -40,6 +40,7 @@
 #page-search .content header nav ul li img {
     width: 70%;
     height: 100px;
+    padding: 5px;
 }
 
 #page-search .content header nav ul li a {
@@ -139,7 +140,7 @@
 }
 
 #page-search main .card h1 {
-    padding: 10px 0;
+    padding: 10px;
     font-size: 26px;
     line-height: 41px;
     text-align: center;

@@ -40,6 +40,7 @@
 #page-result .content header nav ul li img {
     width: 70%;
     height: 100px;
+    padding: 5px;
 }
 
 #page-result .content header nav ul li a {
