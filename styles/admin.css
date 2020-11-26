@@ -1,0 +1,13 @@
+main .content .admin-links {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+main .content .admin-links a {
+    margin: 50px 10px;
+}
+
+main .content .admin-links h2:hover {
+    color: var(--violet);
+}

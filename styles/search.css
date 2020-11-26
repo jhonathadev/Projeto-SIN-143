@@ -1,0 +1,188 @@
+#page-search {
+    height: 100vh;
+    width: 100vw;
+}
+
+#page-search .content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+#page-search .content header nav {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#page-search .content header nav ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 60px;
+}
+
+#page-search .content header nav ul li {
+    margin: 0 20px;
+    list-style: none;
+}
+
+#page-search .content header nav ul li.align-left {
+    margin-right: auto;
+}
+
+#page-search .content header nav ul li img {
+    width: 70%;
+    height: 100px;
+    padding: 5px;
+}
+
+#page-search .content header nav ul li a {
+    color: white;
+    font-size: 24px;
+    transition: 400ms;
+}
+
+#page-search .content header nav ul li a:hover {
+    color: var(--violet);
+    font-size: 24px;
+}
+
+#page-search main .content form {
+    background-color: white;
+    padding: 30px;
+}
+
+
+#page-search main .content form fieldset {
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+#page-search main .content form input {
+    background-color: #f0f0f5;
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    border-radius: 8px 0px 0px 8px;
+    width: 50%;
+    height: 56px;
+    padding: 16px;
+}
+
+#page-search main .content form fieldset input[class=button] {
+    background-color: var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    color: white;
+    width: 20%;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    transition: 400ms;
+    cursor: pointer;    
+}
+
+#page-search main .content form input[class=button]:hover {
+    background-color: var(--violet);
+    font-size: 20px;
+}
+
+#page-search main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 30px;
+}
+
+#page-search main .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: width  400ms;
+}
+
+#page-search main .card img:hover {
+    opacity: 1;
+    transition: 400ms;
+}
+
+#page-search main .card {
+    background-color: #f5f5f5;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 8px;    
+}
+
+
+#page-search main .card .card-body {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    max-height: 350px;
+}
+
+#page-search main .card .card-footer {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 8px 8px;
+}
+
+#page-search main .card h1 {
+    padding: 10px;
+    font-size: 26px;
+    line-height: 41px;
+    text-align: center;
+}
+
+#page-search main .card h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 34px;
+    color: black;
+    text-align: center;
+}
+
+#page-search main .card strong {
+    color: var(--violet);
+    line-height: 24px;
+}
+
+#page-search main .card p {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 16px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+#page-search main .card a {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: 400ms;
+}
+
+#page-search main .card a:hover {
+    color: var(--violet);
+    font-size: 20px;
+}
+
+
+
+

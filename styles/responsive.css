@@ -1,0 +1,75 @@
+@media (max-width: 840px) {
+    #page-home .content .contact-div .address #map {
+        display: none;
+    }
+}
+
+@media (max-width: 730px) {
+    main .cards {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0 !important;
+        transition: 1s;
+    }
+
+    header nav { 
+        height: 100% !important;
+    }
+
+    header nav ul li {
+        padding: 10px;
+    }
+
+    header nav ul li.align-left {
+        margin: 0 !important;
+    }
+
+    header nav ul li img {
+        width: 100% !important;
+    }
+
+    #page-home main .content .img-fix {
+        height: 500px;
+    }
+
+    #page-result main .content .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@media (max-width: 580px) {
+    main .cards {
+        grid-template-columns: 1fr !important;
+    }
+    #page-home .content .contact-div {
+        grid-template-columns: 1fr;
+    }
+
+    #page-home .content .contact-div .address {
+        align-items: center;
+    }
+
+    #page-result .content .cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    footer p {
+        font-size: 14px !important;
+    }
+
+
+}
+
+@media (max-width: 460px) {
+    #page-search main .content form .button {
+        padding: 16px 20px;
+    }
+}
