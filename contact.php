@@ -6,6 +6,7 @@
         <title>Tem vaga aí?</title>
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/responsive.css">
+        <link rel="stylesheet" href="styles/modal.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     </head>
@@ -16,8 +17,8 @@
                     <nav>
                         <ul>
                             <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
-                            <li><a href="index.html">INICIO</a></li>
-                            <li><a href="about.html">SOBRE</a></li>
+                            <li><a href="index.php">INICIO</a></li>
+                            <li><a href="about.php">SOBRE</a></li>
                             <li><a id="search" href="#">BUSCAR</a></li>
                             <li><a href="#">CONTATO</a></li>
                             <li>
@@ -34,7 +35,7 @@
                 <div class="content" id="contato">
                     <h1 class="section-title">Contato</h1>
                     <div class="contact-div">
-                        <form action="">
+                        <form action="#">
                             <fieldset>
                                 <div class="field">
                                     <label for="name">Nome</label>
@@ -101,7 +102,7 @@
                         <h1>Buscar Vaga</h1>
                         <a href="#">Fechar</a>
                     </div>
-                    <form action="search.html">
+                    <form action="search.php">
                         <label for="search">Cidade</label>
                         <div class="search field">
                             <input type="text" name="search" placeholder="Digite a cidade">

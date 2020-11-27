@@ -19,10 +19,10 @@
                     <nav>
                         <ul>
                             <li class="align-left"><img src="imgs/logo.svg" alt="logotipo"></li>
-                            <li><a href="index.html">INICIO</a></li>
-                            <li><a href="about.html">SOBRE</a></li>
-                            <li><a id="search" href="#">BUSCAR</a></li>
-                            <li><a href="contact.html">CONTATO</a></li>
+                            <li><a href="index.php">INICIO</a></li>
+                            <li><a href="about.php">SOBRE</a></li>
+                            <li><a href="#">BUSCAR</a></li>
+                            <li><a href="contact.php">CONTATO</a></li>
                             <li>
                                 <label class="switch">
                                     <input id="color-checked" type="checkbox" checked>
@@ -35,8 +35,15 @@
             </div>
             <main>
                 <div class="content">
-                    <h1 class="section-title">Todos os imóveis cadastrados</h1>
+                    <h1 class="section-title">Buscar</h1>
+                    <form action="#">
+                        <fieldset>
+                            <input type="search" name="query" placeholder="Digite uma cidade" required>
+                            <input class="button" type="submit" value="Buscar">
+                        </fieldsetv>
+                    </form>
                 </div>
+
                 <div class="content">
                     <div class="cards">
                         <div class="card">
@@ -48,8 +55,7 @@
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <a style="color: #f5bf42;"href="edit.html">Editar</a>
-                                <a onclick="remove()" style="color: red;">Remover</a>
+                                <a href="search-result.php">Ver mais</a>
                             </div>
                         </div>
                     </div>
@@ -65,11 +71,5 @@
             </footer>
         </div>
     </body>
-    <script>
-        function remove() {
-            alert("Removido com sucesso!");
-        }
-    </script>
-    <script src="scripts/modal.js"></script>
     <script src="scripts/switch-color.js"></script>
 </html>

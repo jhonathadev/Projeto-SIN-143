@@ -41,8 +41,6 @@
     #page-result main .content .cards {
         grid-template-columns: 1fr;
     }
-
-
 }
 
 @media (max-width: 580px) {
@@ -64,8 +62,6 @@
     footer p {
         font-size: 14px !important;
     }
-
-
 }
 
 @media (max-width: 460px) {

@@ -18,9 +18,9 @@
                     <h1 class="section-title">Login</h1>
                     <div class="login-div">
                         <div class="img-login">
-                            <a href="index.html"><img src="imgs/logo.svg" alt="logo"></a>
+                            <a href="index.php"><img src="imgs/logo.svg" alt="logo"></a>
                         </div>
-                        <form action="admin.html">
+                        <form action="admin.php">
                             <fieldset>
                                 <div class="field">
                                     <label for="user" style="text-align: center;">Usuário</label>

@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styles/carousel.css">
         <link rel="stylesheet" href="styles/search-result.css">
         <link rel="stylesheet" href="styles/responsive.css">
+        <link rel="stylesheet" href="styles/modal.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     </head>
@@ -18,10 +19,10 @@
                     <nav>
                         <ul>
                             <li class="align-left"><img src="imgs/logo.svg" alt="logotipo"></li>
-                            <li><a href="index.html">INICIO</a></li>
-                            <li><a href="about.html">SOBRE</a></li>
+                            <li><a href="index.php">INICIO</a></li>
+                            <li><a href="about.php">SOBRE</a></li>
                             <li><a id="search" href="#">BUSCAR</a></li>
-                            <li><a href="contact.html">CONTATO</a></li>
+                            <li><a href="contact.php">CONTATO</a></li>
                             <li>
                                 <label class="switch">
                                     <input id="color-checked" type="checkbox" checked>
@@ -39,13 +40,13 @@
                         <div class="cards">
                             <div class="card">
                                 <div class="mySlides fade">
-                                    <img class="img-fix" src="imgs/img1.jpeg" alt="imagem carousel">
+                                    <img class="img-fix2" src="imgs/img1.jpeg" alt="imagem carousel">
                                 </div>
                                 <div class="mySlides fade">
-                                    <img class="img-fix" src="imgs/room1.jfif" alt="imagem carousel">
+                                    <img class="img-fix2" src="imgs/room1.jfif" alt="imagem carousel">
                                 </div>
                                 <div class="mySlides fade">
-                                    <img class="img-fix" src="imgs/room2.jfif" alt="imagem carousel">
+                                    <img class="img-fix2" src="imgs/room2.jfif" alt="imagem carousel">
                                 </div>
                             </div>
         
@@ -86,7 +87,7 @@
                         <h1>Buscar Vaga</h1>
                         <a href="#">Fechar</a>
                     </div>
-                    <form action="search.html">
+                    <form action="search.php">
                         <label for="search">Cidade</label>
                         <div class="search field">
                             <input type="text" name="search" placeholder="Digite a cidade">
@@ -98,17 +99,16 @@
                 </div>
             </div>
         </div>
-
         <script>
             function redireciona () {
                 showConfirmButton: false
                 alert("Alugado com sucesso!" + "\n" + "Você será redirecionado para a página inicial.")
                 setTimeout(() => {
-                    window.location ="index.html"
+                    window.location ="index.php"
                 } , 2500)
             }
-            
         </script>
+        <script src="scripts/carousel.js"></script>
         <script src="scripts/modal.js"></script>
         <script src="scripts/switch-color.js"></script>
     </body>

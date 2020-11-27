@@ -5,25 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tem vaga aí?</title>
         <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/carousel.css">
+        <link rel="stylesheet" href="styles/search.css">
         <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="stylesheet" href="styles/modal.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
 
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     </head>
+
     <body>
-        <div id="page-home">
+        <div id="page-search">
             <div class="content">
                 <header>
                     <nav>
                         <ul>
-                            <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
-                            <li><a href="#">INICIO</a></li>
-                            <li><a href="about.html">SOBRE</a></li>
+                            <li class="align-left"><img src="imgs/logo.svg" alt="logotipo"></li>
+                            <li><a href="index.php">INICIO</a></li>
+                            <li><a href="about.php">SOBRE</a></li>
                             <li><a id="search" href="#">BUSCAR</a></li>
-                            <li><a href="contact.html">CONTATO</a></li>
-                            <li><a href="login.html">LOGIN</a></li>
+                            <li><a href="contact.php">CONTATO</a></li>
                             <li>
                                 <label class="switch">
                                     <input id="color-checked" type="checkbox" checked>
@@ -36,21 +35,23 @@
             </div>
             <main>
                 <div class="content">
-                    <div>
-                        <div class="mySlides fade">
-                            <img class="img-fix" src="imgs/1.jpg" alt="imagem carousel">
+                    <h1 class="section-title">Todos os imóveis cadastrados</h1>
+                </div>
+                <div class="content">
+                    <div class="cards">
+                        <div class="card">
+                            <img src="imgs/img1.jpeg" alt="casa">
+                            <div class="card-body">
+                                <h1>Apartamento 1 vaga</h1>
+                                <h3> <strong>R$ 500,00</strong></h3>
+                                <p>Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a style="color: #f5bf42;"href="edit.html">Editar</a>
+                                <a onclick="remove()" style="color: red;">Remover</a>
+                            </div>
                         </div>
-                        <div class="mySlides fade">
-                            <img class="img-fix" src="imgs/2.jpg" alt="imagem carousel">
-                        </div>
-                        <div class="mySlides fade">
-                            <img class="img-fix" src="imgs/img1.jpeg" alt="imagem carousel">
-                        </div>
-                        <!-- <div style="text-align: center; padding: 10px;">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                        </div> -->
                     </div>
                 </div>
             </main>
@@ -68,7 +69,7 @@
                         <h1>Buscar Vaga</h1>
                         <a href="#">Fechar</a>
                     </div>
-                    <form action="search.html">
+                    <form action="search.php">
                         <label for="search">Cidade</label>
                         <div class="search field">
                             <input type="text" name="search" placeholder="Digite a cidade">
@@ -80,8 +81,12 @@
                 </div>
             </div>
         </div>
-        <script src="scripts/carousel.js"></script>
-        <script src="scripts/modal.js"></script>
     </body>
+    <script>
+        function remove() {
+            alert("Removido com sucesso!");
+        }
+    </script>
+    <script src="scripts/modal.js"></script>
     <script src="scripts/switch-color.js"></script>
 </html>

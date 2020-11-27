@@ -18,10 +18,10 @@
                     <nav>
                         <ul>
                             <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
-                            <li><a href="index.html">INICIO</a></li>
-                            <li><a href="about.html">SOBRE</a></li>
+                            <li><a href="index.php">INICIO</a></li>
+                            <li><a href="about.php">SOBRE</a></li>
                             <li><a id="search" href="#">BUSCAR</a></li>
-                            <li><a href="contact.html">CONTATO</a></li>
+                            <li><a href="contact.php">CONTATO</a></li>
                             <li>
                                 <label class="switch">
                                     <input id="color-checked" type="checkbox" checked>
@@ -101,7 +101,7 @@
                         <h1>Buscar Vaga</h1>
                         <a href="#">Fechar</a>
                     </div>
-                    <form action="search.html">
+                    <form action="search.php">
                         <label for="search">Cidade</label>
                         <div class="search field">
                             <input type="text" name="search" placeholder="Digite a cidade">
