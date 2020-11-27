@@ -23,7 +23,7 @@
                         <form action="admin.php">
                             <fieldset>
                                 <div class="field">
-                                    <label for="user" style="text-align: center;">Usuário</label>
+                                    <label for="user" style="text-align: center;">Usuárioo</label>
                                     <input type="text" name="user">
                                 </div>
                                 <div class="field">
