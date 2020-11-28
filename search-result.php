@@ -61,13 +61,10 @@
                                         <option value="3">3</option>
                                     </select>
                                 </div>
-                                
-                                <p>Por outro lado, a contínua expansão de nossa atividade desafia a capacidade de equalização dos índices pretendidos.</p>
-
                                 <div style="margin: 50px 0; text-align: center;">
                                     <a class="button" onclick="redireciona()">Alugar</a>
                                 </div>
-                                
+                                <p>Por outro lado, a contínua expansão de nossa atividade desafia a capacidade de equalização dos índices pretendidos.</p>
                             </div>
                         </div>
                     </div>

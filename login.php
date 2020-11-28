@@ -7,8 +7,7 @@
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/login.css">
         <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="shortcut icon"  href="imgs/casa.svg">
-
+        <link rel="shortcut icon" href="imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -20,10 +19,10 @@
                         <div class="img-login">
                             <a href="index.php"><img src="imgs/logo.svg" alt="logo"></a>
                         </div>
-                        <form action="admin.php">
+                        <form action="view.php">
                             <fieldset>
                                 <div class="field">
-                                    <label for="user" style="text-align: center;">Usuárioo</label>
+                                    <label for="user" style="text-align: center;">Usuário</label>
                                     <input type="text" name="user">
                                 </div>
                                 <div class="field">

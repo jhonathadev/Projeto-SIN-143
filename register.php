@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/carousel.css">
         <link rel="stylesheet" href="styles/responsive.css">
+        <link rel="stylesheet" href="styles/modal.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
-
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -18,10 +18,9 @@
                     <nav>
                         <ul>
                             <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
-                            <li><a href="index.php">INICIO</a></li>
-                            <li><a href="about.php">SOBRE</a></li>
-                            <li><a id="search" href="#">BUSCAR</a></li>
-                            <li><a href="contact.php">CONTATO</a></li>
+                            <li><a href="view.php">Inicio</a></li>
+                            <li><a href="#">Criar Novo Imóvel</a></li>
+                            <li><a href="register-image.php">Banner Inicial</a></li>
                             <li>
                                 <label class="switch">
                                     <input id="color-checked" type="checkbox" checked>
@@ -35,56 +34,59 @@
             <main>
                 <div class="content" id="contato">
                     <h1 class="section-title">Cadastrar Imóvel</h1>
-                        <form action="">
-                            <fieldset>
+                    <?php if( isset($_GET['insert']) && $_GET['insert'] == 1) { ?>
+                        <h5 align="center">Imóvel inserido com sucesso!</h5>
+                    <?php } ?>
+                    <form method="post" action="immobile.controller.php?action=insert">
+                        <fieldset>
+                            <div class="field">
+                                <label for="title">Titulo</label>
+                                <input type="text" name="title" required>
+                            </div>
+                            <div class="field-group">
                                 <div class="field">
-                                    <label for="title">Titulo</label>
-                                    <input type="text" name="title" required>
+                                    <label for="image1">Link Imagem 1</label>
+                                    <input type="url" name="image1" required>
                                 </div>
-        
                                 <div class="field">
-                                    <label for="image">Imagem</label>
-                                    <input type="file" name="image" required style="text-align: right;">
+                                    <label for="image2">Link Imagem 2</label>
+                                    <input type="url" name="image2" required>
                                 </div>
-
-                                <div class="field-group">
-                                    <div class="field">
-                                        <label for="state">Estado</label>
-                                        <select name="uf" required="required">
-                                            <option value="">Selecione o estado</option>
-                                        </select>
-                    
-                                        <input type="hidden" name="state">
-                                    </div>
-                                    <div class="field">
-                                        <label for="city">Cidade</label>
-                                        <select name="city" disabled="disabled" required="required">
-                                            <option value="">Selecione a cidade</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                
+                            </div>
+                            <div class="field-group">
                                 <div class="field">
-                                    <label for="value">Valor da diária (R$)</label>
-                                    <input type="number" name="value" required>
+                                    <label for="state">Estado</label>
+                                    <select name="uf" required="required">
+                                        <option value="">Selecione o estado</option>
+                                    </select>  
+                                    <input type="hidden" name="state">              
+                                </div>
+                                <div class="field">
+                                    <label for="city">Cidade</label>
+                                    <select name="city" disabled="disabled" required="required">
+                                        <option value="">Selecione a cidade</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <div class="field">
+                                    <label for="value_daily">Valor da diária (R$)</label>
+                                    <input type="number" name="value_daily" required>
                                 </div>
                                 <div class="field">
                                     <label for="phone">Telefone para contato</label>
                                     <input type="number" name="phone" required>
                                 </div>
-                                <div class="field">
-                                    <label for="description">Descrição do Imóvel</label>
-                                    <textarea placeholder="Digite sua mensagem..." name="description" required></textarea>
-                                </div>
-        
-                                
-                                <div style="text-align: center;">
-                                    <input class="button" type="submit" value="Cadastrar">
-                                </div>
-                                
-                            </fieldset>
-                        </form>
+                            </div>
+                            <div class="field">
+                                <label for="description">Descrição do Imóvel</label>
+                                <textarea placeholder="Digite sua mensagem..." name="description" required></textarea>
+                            </div>
+                            <div style="text-align: center;">
+                                <input class="button" type="submit" value="Cadastrar">
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </main>
             <footer>

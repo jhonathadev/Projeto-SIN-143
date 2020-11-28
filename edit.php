@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tem vaga aí?</title>
         <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/modal.css">
         <link rel="stylesheet" href="styles/responsive.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
@@ -16,10 +17,9 @@
                     <nav>
                         <ul>
                             <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
-                            <li><a href="index.php">INICIO</a></li>
-                            <li><a href="about.php">SOBRE</a></li>
-                            <li><a id="search" href="#">BUSCAR</a></li>
-                            <li><a href="contact.php">CONTATO</a></li>
+                            <li><a href="view.php">Inicio</a></li>
+                            <li><a href="register.php">Criar Novo Imóvel</a></li>
+                            <li><a href="register-image.php">Banner Inicial</a></li>
                             <li>
                                 <label class="switch">
                                     <input id="color-checked" type="checkbox" checked>
@@ -33,48 +33,57 @@
             <main>
                 <div class="content" id="contato">
                     <h1 class="section-title">Editar Imóvel</h1>
-                        <form action="">
-                            <fieldset>
+                    <?php if( isset($_GET['update']) && $_GET['update'] == 1) { ?>
+                        <h5 align="center">Imóvel atualizado com sucesso!</h5>
+                    <?php } ?>
+                    <form method="post" action="immobile.controller.php?action=update">
+                        <fieldset>
+                            <div class="field">
+                                <label for="title">Titulo</label>
+                                <input type="text" name="title" value="" required>
+                            </div>
+                            <div class="field-group">
                                 <div class="field">
-                                    <label for="title">Titulo</label>
-                                    <input type="text" name="title" value="Apartamento 1 vaga" required>
-                                </div>
-                                <div class="field">
-                                    <label for="image">Imagem</label>
-                                    <input type="file" name="image" value="xdxdxd" required style="text-align: right;">
-                                </div>
-                                <div class="field-group">
-                                    <div class="field">
-                                        <label for="state">Estado</label>
-                                        <select name="uf" required="required">
-                                            <option value="">Seleciona o Estado</option>
-                                        </select>
-                                        <input type="hidden" name="state">
-                                    </div>
-                                    <div class="field">
-                                        <label for="city">Cidade</label>
-                                        <select name="city" disabled="disabled" value="" required="required">
-                                            <option value="">Seleciona a Cidade</option>
-                                        </select>
-                                    </div>
+                                    <label for="image1">Imagem 1</label>
+                                    <input type="text" name="image1" value="xdxdxd" required>
                                 </div>
                                 <div class="field">
-                                    <label for="value">Valor da diária (R$)</label>
-                                    <input type="number" name="value" value="500" required>
+                                    <label for="image2">Imagem 2</label>
+                                    <input type="text" name="image2" value="xdxdxd" required>
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <div class="field">
+                                    <label for="state">Estado</label>
+                                    <select name="uf" required="required">
+                                        <option value="">Seleciona o Estado</option>
+                                    </select>
+                                    <input type="hidden" name="state">
                                 </div>
                                 <div class="field">
-                                    <label for="phone">Telefone para contato</label>
-                                    <input type="number" name="phone" value="37991232233" required>
+                                    <label for="city">Cidade</label>
+                                    <select name="city" disabled="disabled" value="" required="required">
+                                        <option value="">Seleciona a Cidade</option>
+                                    </select>
                                 </div>
-                                <div class="field">
-                                    <label for="description">Descrição do Imóvel</label>
-                                    <textarea name="description" required>Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas.</textarea>
-                                </div>
-                                <div style="text-align: center;">
-                                    <input class="button" type="submit" value="Salvar">
-                                </div>       
-                            </fieldset>
-                        </form>
+                            </div>
+                            <div class="field">
+                                <label for="value">Valor da diária (R$)</label>
+                                <input type="number" name="value" value="500" required>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Telefone para contato</label>
+                                <input type="number" name="phone" value="37991232233" required>
+                            </div>
+                            <div class="field">
+                                <label for="description">Descrição do Imóvel</label>
+                                <textarea name="description" required>Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas.</textarea>
+                            </div>
+                            <div style="text-align: center;">
+                                <input class="button" type="submit" value="Salvar">
+                            </div>       
+                        </fieldset>
+                    </form>
                 </div>
             </main>
             <footer>
@@ -106,7 +115,4 @@
     </body>
     <script src="scripts/ibge-api.js"></script>
     <script src="scripts/modal.js"></script>
-    <script src="scripts/modal.js"></script>
-
-
 </html>

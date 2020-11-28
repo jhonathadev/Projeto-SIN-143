@@ -46,21 +46,28 @@
 
                 <div class="content">
                     <div class="cards">
-                        <div class="card">
-                            <img src="imgs/img1.jpeg" alt="casa">
-                            <div class="card-body">
-                                <h1>Apartamento 1 vaga</h1>
-                                <h3> <strong>R$ 500,00</strong></h3>
-                                <p>Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas.
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="search-result.php">Ver mais</a>
-                            </div>
-                        </div>
+                        <?php 
+                            $action = 'read';
+                            require "immobile.controller.php";
+                            foreach ($return as $indice => $value): ?> 
+                                <div class="card">
+                                    <img src="<?php echo $value->image1; ?>" alt="casa">
+                                    <div class="card-body">
+                                        <h1><?php echo $value->title; ?></h1>
+                                        <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
+                                        <p>
+                                            <?php echo $value->description ?>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="search-result.php">Ver mais</a>
+                                    </div>
+                                </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </main>
+
             <footer>
                 <div class="footer-div">   
                     <p>Developed with <span>♥</span> by Jhonatha and Viviane</p>

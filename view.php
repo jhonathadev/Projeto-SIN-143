@@ -6,9 +6,9 @@
         <title>Tem vaga aí?</title>
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/search.css">
+        <link rel="stylesheet" href="styles/modal.css">
         <link rel="stylesheet" href="styles/responsive.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
-
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     </head>
 
@@ -19,10 +19,9 @@
                     <nav>
                         <ul>
                             <li class="align-left"><img src="imgs/logo.svg" alt="logotipo"></li>
-                            <li><a href="index.php">INICIO</a></li>
-                            <li><a href="about.php">SOBRE</a></li>
-                            <li><a id="search" href="#">BUSCAR</a></li>
-                            <li><a href="contact.php">CONTATO</a></li>
+                            <li><a href="view.php">Inicio</a></li>
+                            <li><a href="register.php">Criar Novo Imóvel</a></li>
+                            <li><a href="register-image.php">Banner Inicial</a></li>
                             <li>
                                 <label class="switch">
                                     <input id="color-checked" type="checkbox" checked>
@@ -35,23 +34,29 @@
             </div>
             <main>
                 <div class="content">
-                    <h1 class="section-title">Todos os imóveis cadastrados</h1>
+                    <h1 class="section-title">Imóveis cadastrados</h1>
                 </div>
                 <div class="content">
                     <div class="cards">
-                        <div class="card">
-                            <img src="imgs/img1.jpeg" alt="casa">
-                            <div class="card-body">
-                                <h1>Apartamento 1 vaga</h1>
-                                <h3> <strong>R$ 500,00</strong></h3>
-                                <p>Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas. Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado assume importantes posições no estabelecimento das condições inegavelmente apropriadas.
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <a style="color: #f5bf42;"href="edit.html">Editar</a>
-                                <a onclick="remove()" style="color: red;">Remover</a>
-                            </div>
-                        </div>
+                        <?php 
+                            $action = 'read';
+                            require "immobile.controller.php";
+                            foreach ($return as $indice => $value): ?> 
+                                <div class="card">
+                                    <img src="<?php echo $value->image1; ?>" alt="casa">
+                                    <div class="card-body">
+                                        <h1><?php echo $value->title; ?></h1>
+                                        <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
+                                        <p>
+                                            <?php echo $value->description ?>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="edit.php?action=update" style="color: #f5bf42;">Editar</a>
+                                        <a href="view.php?action=delete" style="color: red;">Remover</a>
+                                    </div>
+                                </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </main>

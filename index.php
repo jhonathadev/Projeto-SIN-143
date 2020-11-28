@@ -37,20 +37,20 @@
             <main>
                 <div class="content">
                     <div>
+                    <?php 
+                        $action = 'read';
+                        require "image.controller.php";
+                        foreach ($return as $indice => $value): ?> 
                         <div class="mySlides fade">
-                            <img class="img-fix" src="imgs/1.jpg" alt="imagem carousel">
+                            <img class="img-fix" src="<?php echo $value->image1; ?>" alt="imagem carousel">
                         </div>
                         <div class="mySlides fade">
-                            <img class="img-fix" src="imgs/2.jpg" alt="imagem carousel">
+                            <img class="img-fix" src="<?php echo $value->image2; ?>" alt="imagem carousel">
                         </div>
                         <div class="mySlides fade">
-                            <img class="img-fix" src="imgs/img1.jpeg" alt="imagem carousel">
+                            <img class="img-fix" src="<?php echo $value->image3; ?>" alt="imagem carousel">
                         </div>
-                        <!-- <div style="text-align: center; padding: 10px;">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                        </div> -->
+                    <?php endforeach ?>
                     </div>
                 </div>
             </main>
