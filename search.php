@@ -36,9 +36,13 @@
             <main>
                 <div class="content">
                     <h1 class="section-title">Buscar</h1>
-                    <form action="#">
+                    <?php 
+                        // $action = 'search';
+                        // require "immobile.controller.php";
+                    ?>
+                    <form method="post" action="immobile.controller.php?action=search">
                         <fieldset>
-                            <input type="search" name="query" placeholder="Digite uma cidade" required>
+                            <input type="search" name="city" placeholder="Digite uma cidade" required>
                             <input class="button" type="submit" value="Buscar">
                         </fieldsetv>
                     </form>
@@ -50,17 +54,18 @@
                             $action = 'read';
                             require "immobile.controller.php";
                             foreach ($return as $indice => $value): ?> 
-                                <div class="card">
+                                <div class="card" id="<?php echo $value->id; ?>">
                                     <img src="<?php echo $value->image1; ?>" alt="casa">
                                     <div class="card-body">
                                         <h1><?php echo $value->title; ?></h1>
+                                        <h4><?php echo $value->state; ?>, <?php echo $value->city; ?></h4>
                                         <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
                                         <p>
                                             <?php echo $value->description ?>
                                         </p>
                                     </div>
-                                    <div class="card-footer">
-                                        <a href="search-result.php">Ver mais</a>
+                                    <div class="card-footer-center" style="align-items: center;">
+                                        <a href="search-result.php?id=<?php echo $value->id; ?>">Ver mais</a>
                                     </div>
                                 </div>
                         <?php endforeach; ?>

@@ -6,7 +6,6 @@
         <title>Tem vaga aí?</title>
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/search.css">
-        <link rel="stylesheet" href="styles/modal.css">
         <link rel="stylesheet" href="styles/responsive.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
@@ -42,18 +41,21 @@
                             $action = 'read';
                             require "immobile.controller.php";
                             foreach ($return as $indice => $value): ?> 
-                                <div class="card">
+                                <div class="card" id="<?php echo $value->id; ?>">
                                     <img src="<?php echo $value->image1; ?>" alt="casa">
                                     <div class="card-body">
                                         <h1><?php echo $value->title; ?></h1>
+                                        <h4><?php echo $value->state; ?>, <?php echo $value->city; ?></h4>
                                         <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
                                         <p>
                                             <?php echo $value->description ?>
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a href="edit.php?action=update" style="color: #f5bf42;">Editar</a>
-                                        <a href="view.php?action=delete" style="color: red;">Remover</a>
+                                        <a href="search-result.php?id=<?php echo $value->id; ?>" style="color: #00a308;">Visualizar</a>
+
+                                        <a href="edit.php?id=<?php echo $value->id; ?>" style="color: #f5bf42;">Editar</a>
+                                        <a href="view.php?action=delete&id=<?php echo $value->id; ?>" style="color: red;">Remover</a>
                                     </div>
                                 </div>
                         <?php endforeach; ?>
@@ -68,23 +70,6 @@
                     </div>
                 </div>
             </footer>
-            <div id="modal" class="hide">
-                <div class="content-modal">
-                    <div class="header">
-                        <h1>Buscar Vaga</h1>
-                        <a href="#">Fechar</a>
-                    </div>
-                    <form action="search.php">
-                        <label for="search">Cidade</label>
-                        <div class="search field">
-                            <input type="text" name="search" placeholder="Digite a cidade">
-                            <button>
-                                <img src="imgs/search.svg" alt="Buscar">
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </body>
     <script>
@@ -92,6 +77,5 @@
             alert("Removido com sucesso!");
         }
     </script>
-    <script src="scripts/modal.js"></script>
     <script src="scripts/switch-color.js"></script>
 </html>

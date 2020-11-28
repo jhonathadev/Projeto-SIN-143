@@ -34,8 +34,10 @@
             <main>
                 <div class="content" id="contato">
                     <h1 class="section-title">Cadastrar Imóvel</h1>
-                    <?php if( isset($_GET['insert']) && $_GET['insert'] == 1) { ?>
-                        <h5 align="center">Imóvel inserido com sucesso!</h5>
+                    <?php if( isset($_GET['insert']) && $_GET['insert'] == 'sucess') { ?>
+                        <script>
+                            alert("Imóvel cadastrado com sucesso!");
+                        </script>
                     <?php } ?>
                     <form method="post" action="immobile.controller.php?action=insert">
                         <fieldset>
@@ -117,6 +119,5 @@
         </div>
     </body>
     <script src="scripts/ibge-api.js"></script>
-    <script src="scripts/modal.js"></script>
     <script src="scripts/switch-color.js"></script>
 </html>

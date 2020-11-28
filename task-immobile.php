@@ -4,6 +4,7 @@
 	 	
 		private $connect;
 		private $immobile;
+
 		public function __construct(Conection $connect, Immobile $immobile){
 			$this->connect = $connect->connect();
 			$this->immobile = $immobile;
@@ -22,17 +23,18 @@
             $stmt->bindValue(':phone', $this->immobile->__get('phone'));
             $stmt->bindValue(':description', $this->immobile->__get('description'));
 
-			if($stmt->execute()){
+			if($stmt->execute()) {
 				echo "Sucesso ao inserir";
-			}else{
+				return $this->connect->lastInsertId();
+			} else {
 				echo "Erro ao inserir";
 			}
 		}
 		
 		public function update() {
-
 			$query = 'update immobile set title = :title, image1 = :image1, image2 = :image2, state = :state, city = :city, value_daily = :value_daily, phone = :phone, description = :description where id = :id';
 			$stmt = $this->connect->prepare($query);
+			$stmt->bindValue(':id', $this->immobile->__get('id'));
 			$stmt->bindValue(':title', $this->immobile->__get('title'));
 			$stmt->bindValue(':image1', $this->immobile->__get('image1'));
 			$stmt->bindValue(':image2', $this->immobile->__get('image2'));
@@ -56,15 +58,28 @@
 			return $stmt->fetchAll(PDO::FETCH_OBJ);
 		}
 
-		public function delete() {
-			$query = 'delete from immobile where id = :id';
+		public function readId($idUrl) {
+			$query = 'select * from immobile where id ='.$idUrl;
 			$stmt = $this->connect->prepare($query);
-			$stmt->bindValue(':id', $this->immobile->__get('id'));
+			$stmt->execute();
+			return $stmt->fetchAll(PDO::FETCH_OBJ);
+		}
+
+		public function delete($idUrl) {
+			$query = 'delete from immobile where id ='.$idUrl;
+			$stmt = $this->connect->prepare($query);
 			if($stmt->execute()){
 				echo "Sucesso ao deletar";
 			}else{
 				echo "Erro ao deletar";
 			}
+		}
+
+		public function search($city) {
+			$query = 'select * from immobile where city ='.$city;
+			$stmt = $this->connect->prepare($query);
+			$stmt->execute();
+			return $stmt->fetchAll(PDO::FETCH_OBJ);
 		}
 	}
 ?>

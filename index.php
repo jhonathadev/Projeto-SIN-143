@@ -68,10 +68,10 @@
                         <h1>Buscar Vaga</h1>
                         <a href="#">Fechar</a>
                     </div>
-                    <form action="search.php">
-                        <label for="search">Cidade</label>
+                    <form method="post" action="immobile.controller.php?action=search">
+                        <label for="city">Cidade</label>
                         <div class="search field">
-                            <input type="text" name="search" placeholder="Digite a cidade">
+                            <input type="text" name="city" placeholder="Digite a cidade" required>
                             <button>
                                 <img src="imgs/search.svg" alt="Buscar">
                             </button>

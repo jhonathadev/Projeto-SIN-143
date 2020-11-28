@@ -34,39 +34,46 @@
                 </header>
 
                 <main>
-                    <!-- Slideshow container -->
+                    <!-- Slideshow container -->                    
                     <div class="content">
-                        <h1 class="section-title">Pousada Aurora</h1>
+                        <?php 
+                            $action = 'readId';
+                            require "immobile.controller.php"; 
+                        ?> 
+                        <?php foreach ($return as $indice => $value): ?> 
+
+                        <h1 class="section-title"><?php echo $value->state;?>-><?php echo $value->city;?></h1>
                         <div class="cards">
                             <div class="card">
                                 <div class="mySlides fade">
-                                    <img class="img-fix2" src="imgs/img1.jpeg" alt="imagem carousel">
+                                    <img class="img-fix2" src="<?php echo $value->image1; ?>" alt="imagem carousel">
                                 </div>
                                 <div class="mySlides fade">
-                                    <img class="img-fix2" src="imgs/room1.jfif" alt="imagem carousel">
+                                    <img class="img-fix2" src="<?php echo $value->image2; ?>" alt="imagem carousel">
                                 </div>
-                                <div class="mySlides fade">
-                                    <img class="img-fix2" src="imgs/room2.jfif" alt="imagem carousel">
-                                </div>
+                                
                             </div>
         
                             <div class="card">
-                                <h1>Apartamento 1</h1>
-                                <p>Valor: R$ 300,00</p>
+                                <h1><?php echo $value->title; ?></h1>
+                                <p>Valor: R$ <?php echo $value->value_daily; ?></p>
                                 <div class="card-group">
-                                    <p>Quartos:</p>
-                                    <select name="quartos" id="quartos">
+                                    <p>Telefone: <?php echo $value->phone; ?></p>
+
+                                    <!-- <select name="quartos" id="quartos">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
-                                    </select>
+                                    </select> -->
                                 </div>
                                 <div style="margin: 50px 0; text-align: center;">
                                     <a class="button" onclick="redireciona()">Alugar</a>
                                 </div>
-                                <p>Por outro lado, a contínua expansão de nossa atividade desafia a capacidade de equalização dos índices pretendidos.</p>
+                                <p>Descrição do imóvel: <?php echo $value->description; ?></p>
                             </div>
                         </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </main>
             </div>

@@ -4,8 +4,8 @@
 		private $title;
 		private $image1;
 		private $image2;
-		private $city;
 		private $state;
+		private $city;
         private $value_daily;
         private $phone;
 		private $description;
