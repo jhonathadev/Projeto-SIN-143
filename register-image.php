@@ -66,6 +66,7 @@
                 </div>
             </footer>
         </div>
+        <script src="scripts/switch-color.js"></script>
+        <script src="scripts/validate.js"></script>
     </body>
-    <script src="scripts/switch-color.js"></script>
 </html>

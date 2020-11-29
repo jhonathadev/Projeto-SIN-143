@@ -23,11 +23,11 @@
                             <fieldset>
                                 <div class="field">
                                     <label for="user" style="text-align: center;">Usuário</label>
-                                    <input type="text" name="user">
+                                    <input type="text" name="user" required>
                                 </div>
                                 <div class="field">
                                     <label for="password" style="text-align: center;">Senha</label>
-                                    <input type="password" name="password">
+                                    <input type="password" name="password" required>
                                 </div>
                                 <div style="text-align: center;">
                                     <input class="button" type="submit" value="Entrar">
@@ -38,5 +38,6 @@
                 </div>
             </div>
         </main>
+        <script src="scripts/validate.js"></script>
     </body>
 </html>

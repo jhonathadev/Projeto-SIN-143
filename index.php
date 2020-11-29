@@ -82,6 +82,6 @@
         </div>
         <script src="scripts/carousel.js"></script>
         <script src="scripts/modal.js"></script>
+        <script src="scripts/switch-color.js"></script>
     </body>
-    <script src="scripts/switch-color.js"></script>
 </html>

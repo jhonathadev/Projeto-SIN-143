@@ -109,7 +109,7 @@
                 alert("Alugado com sucesso!" + "\n" + "Você será redirecionado para a página inicial.")
                 setTimeout(() => {
                     window.location ="index.php"
-                } , 2500)
+                } , 1500)
             }
         </script>
         <script src="scripts/carousel.js"></script>

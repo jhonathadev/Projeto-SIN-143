@@ -53,7 +53,6 @@
                                     </div>
                                     <div class="card-footer">
                                         <a href="search-result.php?id=<?php echo $value->id; ?>" style="color: #00a308;">Visualizar</a>
-
                                         <a href="edit.php?id=<?php echo $value->id; ?>" style="color: #f5bf42;">Editar</a>
                                         <a href="view.php?action=delete&id=<?php echo $value->id; ?>" style="color: red;">Remover</a>
                                     </div>
@@ -71,11 +70,11 @@
                 </div>
             </footer>
         </div>
+        <script>
+            function remove() {
+                alert("Removido com sucesso!");
+            }
+        </script>
+        <script src="scripts/switch-color.js"></script>
     </body>
-    <script>
-        function remove() {
-            alert("Removido com sucesso!");
-        }
-    </script>
-    <script src="scripts/switch-color.js"></script>
 </html>

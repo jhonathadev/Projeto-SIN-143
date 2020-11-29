@@ -54,7 +54,7 @@
         
                                 <div class="field">
                                     <label for="telefone" >Mensagem</label>
-                                    <textarea placeholder="Digite sua mensagem..."></textarea>
+                                    <textarea placeholder="Digite sua mensagem..." required></textarea>
                                 </div>
         
                                 <div class="field">
@@ -114,7 +114,8 @@
                 </div>
             </div>
         </div>
+        <script src="scripts/modal.js"></script>
+        <script src="scripts/switch-color.js"></script>
+        <script src="scripts/validate.js"></script>
     </body>
-    <script src="scripts/modal.js"></script>
-    <script src="scripts/switch-color.js"></script>
 </html>

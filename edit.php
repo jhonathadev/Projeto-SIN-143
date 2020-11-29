@@ -103,6 +103,7 @@
                 </div>
             </footer>
         </div>
+        <script src="scripts/ibge-api.js"></script>
+        <script src="scripts/validate.js"></script>
     </body>
-    <script src="scripts/ibge-api.js"></script>
 </html>
