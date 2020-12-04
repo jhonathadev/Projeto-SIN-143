@@ -36,7 +36,7 @@
                     <div class="content">
                         <?php 
                             $action = 'readId';
-                            require "immobile.controller.php"; 
+                            require "src/immobile.controller.php"; 
                         ?> 
                         <?php foreach ($return as $indice => $value): ?> 
 

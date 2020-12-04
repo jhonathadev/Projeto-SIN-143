@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tem vaga aí?</title>
-        <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/carousel.css">
-        <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="shortcut icon"  href="imgs/casa.svg">
+        <link rel="stylesheet" href="../../styles/index.css">
+        <link rel="stylesheet" href="../../styles/carousel.css">
+        <link rel="stylesheet" href="../../styles/responsive.css">
+        <link rel="shortcut icon"  href="../../imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -16,7 +16,7 @@
                 <header>
                     <nav>
                         <ul>
-                            <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
+                            <li class="align-left"> <a href="#"><img src="../../imgs/logo.svg" alt="logotipo"></a></li>
                             <li><a href="view.php">Inicio</a></li>
                             <li><a href="register.php">Criar Novo Imóvel</a></li>
                             <li><a href="#">Banner Inicial</a></li>
@@ -61,12 +61,12 @@
                 <div class="footer-div">   
                     <p>Developed with <span>♥</span> by Jhonatha and Viviane</p>
                     <div style="display: inline;">
-                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="Facebook"></a>
+                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="../../imgs/git-logo.svg" alt="Facebook"></a>
                     </div>
                 </div>
             </footer>
         </div>
-        <script src="scripts/switch-color.js"></script>
-        <script src="scripts/validate.js"></script>
+        <script src="../../scripts/switch-color.js"></script>
+        <script src="../../scripts/validate.js"></script>
     </body>
 </html>

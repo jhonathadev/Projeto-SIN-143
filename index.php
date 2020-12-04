@@ -34,7 +34,7 @@
             <main>
                 <div class="content">
                     <?php $action = 'read';
-                        require "image.controller.php";
+                        require "src/image.controller.php";
                         foreach ($return as $indice => $value): ?> 
                             <div class="mySlides fade">
                                 <img class="img-fix" src="<?php echo $value->image1; ?>" alt="imagem carousel">
@@ -48,7 +48,7 @@
                     <?php endforeach ?>
 
                     <div class="search-bar">
-                        <form method="post" action="immobile.controller.php?action=search">
+                        <form method="post" action="src/immobile.controller.php?action=search">
                             <fieldset>
                                 <input type="search" name="city" placeholder="Digite uma cidade" required>
                                 <input type="number" placeholder="Min (R$)" name="min" min="1" required>

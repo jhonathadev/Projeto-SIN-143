@@ -354,15 +354,13 @@ footer a img {
     width: 50px;
     height: 40px;
     margin: 5px;
-    object-fit: cover;
     border-radius: 10px;
     transition: 400ms;
+    opacity: 0.5;
 }
 
 footer a img:hover {
-    opacity: 0.8;
-    width: 55px;
-    height: 45px;
+    opacity: 1;
 }
 
 

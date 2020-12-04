@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tem vaga aí?</title>
-        <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/search.css">
-        <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="shortcut icon"  href="imgs/casa.svg">
+        <link rel="stylesheet" href="../../styles/index.css">
+        <link rel="stylesheet" href="../../styles/search.css">
+        <link rel="stylesheet" href="../../styles/responsive.css">
+        <link rel="shortcut icon"  href="../../imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     </head>
 
@@ -17,7 +17,7 @@
                 <header>
                     <nav>
                         <ul>
-                            <li class="align-left"><img src="imgs/logo.svg" alt="logotipo"></li>
+                            <li class="align-left"><img src="../../imgs/logo.svg" alt="logotipo"></li>
                             <li><a href="view.php">Inicio</a></li>
                             <li><a href="register.php">Criar Novo Imóvel</a></li>
                             <li><a href="register-image.php">Banner Inicial</a></li>
@@ -37,7 +37,7 @@
                     <div class="cards">
                         <?php 
                             $action = 'read';
-                            require "immobile.controller.php";
+                            require "../immobile.controller.php";
 
                             if(empty($return)) { ?>
                                 <h2 style="text-align:center;">Nenhum registro foi encontrado :(</h2>
@@ -72,7 +72,7 @@
                 <div class="footer-div">   
                     <p>Developed with <span>♥</span> by Jhonatha and Viviane</p>
                     <div style="display: inline;">
-                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="github"></a>
+                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="../../imgs/git-logo.svg" alt="github"></a>
                     </div>
                 </div>
             </footer>
@@ -88,6 +88,6 @@
                 }
             }
         </script>
-        <script src="scripts/switch-color.js"></script>
+        <script src="../../scripts/switch-color.js"></script>
     </body>
 </html>

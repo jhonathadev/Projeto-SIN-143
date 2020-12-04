@@ -36,7 +36,7 @@
                 <div class="content">
                     <h1 class="section-title">Buscar</h1>
                     <div class="search-bar">
-                        <form method="post" action="immobile.controller.php?action=search">
+                        <form method="post" action="src/immobile.controller.php?action=search">
                             <fieldset>
                                 <input id="city" type="search" name="city" placeholder="Digite uma cidade" required>
                                 <input id="min" type="number" placeholder="Min (R$)" name="min" min="1" required>
@@ -52,7 +52,7 @@
                     <div class="cards">
                         <?php 
                             $action = ' ';
-                            require "immobile.controller.php";
+                            require "src/immobile.controller.php";
                             $city = $_GET['city'];
                             $min = $_GET['min'];
                             $max = $_GET['max'];

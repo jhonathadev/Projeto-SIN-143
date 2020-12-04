@@ -19,7 +19,7 @@
 		$connect =  new Conection();
 		$register = new taskImmobile($connect, $immobile);
 		$register->insert();
-		header('location:view.php?insert=sucess');
+		header('location:admin/view.php?insert=sucess');
 		exit;
 	} else if($action == 'read') {
 		$immobile = new Immobile();
@@ -49,7 +49,7 @@
 		$connect = new Conection();
 		$update =  new taskImmobile($connect,$immobile);
 		$update->update();
-		header('location:view.php?update=sucess');
+		header('location:admin/view.php?update=sucess');
 		exit;
 	} else if($action == 'delete') {
 		if(!empty($_GET['id'])) {
@@ -58,17 +58,17 @@
 			$connect = new Conection();
 			$remove =  new taskImmobile($connect,$immobile);
 			$remove->delete($idUrl);
-			header('location:view.php?delete=sucess'); 
+			header('location:admin/view.php?delete=sucess'); 
 			exit;
 		} else {
-			header('location:view.php?delete=error'); 
+			header('location:admin/view.php?delete=error'); 
 			exit;
 		}
 	} else if($action == 'search') {
 		$city = $_POST['city'];
 		$min = $_POST['min'];
 		$max = $_POST['max'];
-		header("location:search.php?city=$city&min=$min&max=$max&$action=search"); 
+		header("location:../search.php?city=$city&min=$min&max=$max&$action=search"); 
 		exit;
 	} else if($action == '') {
 		exit;

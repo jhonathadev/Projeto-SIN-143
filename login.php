@@ -19,7 +19,7 @@
                         <div class="img-login">
                             <a href="index.php"><img src="imgs/logo.svg" alt="logo"></a>
                         </div>
-                        <form action="view.php">
+                        <form action="src/admin/view.php">
                             <fieldset>
                                 <div class="field">
                                     <label for="user" style="text-align: center;">Usuário</label>
