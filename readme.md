@@ -5,7 +5,6 @@
 
 ### Developed by:
 * Viviane Renizia Mendes Silva - 5209
-* https://github.com/jhonathadev
+* https://github.com/vivianerenizia
 * Jhonatha Cordeiro Gomes - 5984
-* https://github.com/renizia
-*https://github.com/vivianerenizia
+* https://github.com/jhonathadev
