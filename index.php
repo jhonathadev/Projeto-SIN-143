@@ -16,7 +16,7 @@
                 <header>
                     <nav>
                         <ul>
-                            <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
+                            <li class="align-left"> <img src="imgs/logo.svg" alt="logotipo"></li>
                             <li><a href="#">INICIO</a></li>
                             <li><a href="about.php">SOBRE</a></li>
                             <li><a href="contact.php">CONTATO</a></li>

@@ -40,7 +40,7 @@
                         require "../immobile.controller.php"; 
                     ?> 
 
-                    <form method="post" action="immobile.controller.php?action=update">
+                    <form method="post" action="../immobile.controller.php?action=update">
                         <?php foreach ($return as $indice => $value): ?> 
                         <fieldset>
                             <div class="field">

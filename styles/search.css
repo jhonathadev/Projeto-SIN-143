@@ -216,6 +216,7 @@
     line-height: 26px;
     color: var(--primary-color);
     margin-bottom: 10px;
+    cursor: pointer;
     transition: 400ms;
 }
 

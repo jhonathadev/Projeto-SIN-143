@@ -38,7 +38,7 @@
                             alert("Imóvel cadastrado com sucesso!");
                         </script>
                     <?php } ?>
-                    <form method="post" action="immobile.controller.php?action=insert">
+                    <form method="post" action="../immobile.controller.php?action=insert">
                         <fieldset>
                             <div class="field">
                                 <label for="title">Titulo</label>
@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="field">
                                     <label for="phone">Telefone para contato</label>
-                                    <input type="number" name="phone" min="1"required>
+                                    <input type="number" maxlength="11" name="phone" min="1"required>
                                 </div>
                             </div>
                             <div class="field">

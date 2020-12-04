@@ -54,14 +54,14 @@
 		}
 
 		public function read() {
-			$query = 'select * from immobile';
+			$query = 'select * from immobile ORDER BY id DESC';
 			$stmt = $this->connect->prepare($query);
 			$stmt->execute();
 			return $stmt->fetchAll(PDO::FETCH_OBJ);
 		}
 
 		public function readId($idUrl) {
-			$query = 'select * from immobile where id ='.$idUrl;
+			$query = "select * from immobile where id = '$idUrl' ORDER BY id DESC";
 			$stmt = $this->connect->prepare($query);
 			$stmt->execute();
 			return $stmt->fetchAll(PDO::FETCH_OBJ);
