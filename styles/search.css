@@ -91,7 +91,16 @@
     background-color: var(--violet);
 }
 
+#page-search .content .card-content .description {
+    width: 100%;
+    height: 130px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
+#page-search .content .card-content .description p {
+    word-wrap: break-word;
+}
 #page-search main .content form fieldset {
     border: none;
     display: flex;

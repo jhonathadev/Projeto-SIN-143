@@ -58,25 +58,22 @@
                                 <div class="card-group">
                                     <p>Nº quartos:</p>
 
-                                    <select name="quartos" id="quartos">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
+                                    <select name="rooms" id="rooms">
                                     </select>
+                                    <input id="numRooms" type="hidden" value="<?php echo $value->rooms; ?>">
                                 </div>
-                                <p>Telefone:<?php echo $value->phone; ?></p>
+                                <p>Telefone: <?php echo $value->phone; ?></p>
                                 <div style="margin: 50px 0; text-align: center;">
-                                    <a class="button" onclick="redireciona()">Alugar</a>
+                                    <a class="button" onclick="redirect()">Reservar</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="content">
+                        <div class="description">
                             <h3>Descrição do imóvel:</h3> 
                             <p><?php echo $value->description; ?></p>
                         </div>
                         <br>
                         <?php endforeach; ?>
-
                     </div>
                 </main>
             </div>
@@ -90,12 +87,24 @@
             </footer>
         </div>
         <script>
-            function redireciona () {
+            function redirect () {
                 showConfirmButton: false
                 alert("Imóvel reservado com sucesso!" + "\n" + "Você será redirecionado para a página inicial.")
                 setTimeout(() => {
                     window.location ="index.php"
                 } , 1500)
+            }
+        </script>
+
+        <script>
+            var rooms = document.getElementById("rooms")
+            var numRooms = document.getElementById("numRooms").value
+            for(var i = 1; i <= numRooms; i++) {
+                var newOption = document.createElement('option');
+                var optionText = document.createTextNode(i);
+                newOption.appendChild(optionText);
+                newOption.setAttribute('value',i);
+                rooms.appendChild(newOption);
             }
         </script>
         <script src="scripts/carousel.js"></script>

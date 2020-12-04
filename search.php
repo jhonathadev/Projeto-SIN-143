@@ -35,17 +35,13 @@
             <main>
                 <div class="content">
                     <h1 class="section-title">Buscar</h1>
-                    <?php 
-                        // $action = 'search';
-                        // require "immobile.controller.php";
-                    ?>
                     <div class="search-bar">
                         <form method="post" action="immobile.controller.php?action=search">
                             <fieldset>
-                                <input type="search" name="city" placeholder="Digite uma cidade" required>
-                                <input type="number" placeholder="Min (R$)" name="min" min="1">
-                                <input type="number" placeholder="Max (R$)" name="max" min="1">
-                                <input type="submit" value="Buscar">
+                                <input id="city" type="search" name="city" placeholder="Digite uma cidade" required>
+                                <input id="min" type="number" placeholder="Min (R$)" name="min" min="1" required>
+                                <input id="max" type="number" placeholder="Max (R$)" name="max" min="2" required>
+                                <input onclick="getFields()" type="submit" value="Buscar">
                             </fieldset>
                         </form>
                     </div>
@@ -55,6 +51,7 @@
                 <div class="content">
                     <div class="cards">
                         <?php 
+                            $action = ' ';
                             require "immobile.controller.php";
                             $city = $_GET['city'];
                             $min = $_GET['min'];
@@ -63,24 +60,32 @@
                             $connect =  new Conection();
                             $list = new taskImmobile($connect, $immobile);
                             $return = $list->search($city, $min, $max);
-                            foreach ($return as $indice => $value): ?> 
-                                <div class="card" id="<?php echo $value->id; ?>">
-                                    <img src="<?php echo $value->image1; ?>" alt="casa">
-                                    <div class="card-body">
-                                        <div class="card-content">
-                                            <h1><?php echo $value->title; ?></h1>
-                                            <h4><?php echo $value->state; ?>, <?php echo $value->city; ?></h4>
-                                            <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
-                                            <p>
-                                                <?php echo $value->description ?>
-                                            </p>
+
+                            if(empty($return)) { ?>
+                                <h2 style="text-align:center;">Nenhum registro foi encontrado :(</h2>
+                            <?php
+                            } else {
+                                foreach ($return as $indice => $value): ?> 
+                                    <div class="card" id="<?php echo $value->id; ?>">
+                                        <img src="<?php echo $value->image1; ?>" alt="casa">
+                                        <div class="card-body">
+                                            <div class="card-content">
+                                                <h1><?php echo $value->title; ?></h1>
+                                                <h4><?php echo $value->state; ?>, <?php echo $value->city; ?></h4>
+                                                <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
+                                                <div class="description">
+                                                    <p>
+                                                        <?php echo $value->description ?>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer-center">
+                                            <a href="search-result.php?id=<?php echo $value->id; ?>">Ver mais</a>
                                         </div>
                                     </div>
-                                    <div class="card-footer-center">
-                                        <a href="search-result.php?id=<?php echo $value->id; ?>">Ver mais</a>
-                                    </div>
-                                </div>
-                            <?php endforeach;
+                                <?php endforeach;
+                            }
                         ?>
                     </div>
                 </div>

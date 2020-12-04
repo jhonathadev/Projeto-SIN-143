@@ -6,6 +6,7 @@
 		private $image2;
 		private $state;
 		private $city;
+		private $rooms;
         private $value_daily;
         private $phone;
 		private $description;

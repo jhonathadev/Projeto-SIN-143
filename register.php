@@ -71,12 +71,16 @@
                             </div>
                             <div class="field-group">
                                 <div class="field">
+                                    <label for="rooms">Nº de quartos</label>
+                                    <input type="number" name="rooms" min="1" required>
+                                </div>
+                                <div class="field">
                                     <label for="value_daily">Valor da diária (R$)</label>
-                                    <input type="number" name="value_daily" required>
+                                    <input type="number" name="value_daily" min="1" required>
                                 </div>
                                 <div class="field">
                                     <label for="phone">Telefone para contato</label>
-                                    <input type="number" name="phone" required>
+                                    <input type="number" name="phone" min="1"required>
                                 </div>
                             </div>
                             <div class="field">

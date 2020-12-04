@@ -11,6 +11,7 @@
 		$immobile->__set('image1',$_POST['image1']);
 		$immobile->__set('image2',$_POST['image2']);
 		$immobile->__set('city',$_POST['city']);
+		$immobile->__set('rooms',$_POST['rooms']);
 		$immobile->__set('state',$_POST['state']);
 		$immobile->__set('value_daily',$_POST['value_daily']);
 		$immobile->__set('phone',$_POST['phone']);
@@ -40,6 +41,7 @@
 		$immobile->__set('image1',$_POST['image1']);
 		$immobile->__set('image2',$_POST['image2']);
 		$immobile->__set('city',$_POST['city']);
+		$immobile->__set('rooms',$_POST['rooms']);
 		$immobile->__set('state',$_POST['state']);
 		$immobile->__set('value_daily',$_POST['value_daily']);
 		$immobile->__set('phone',$_POST['phone']);
@@ -67,6 +69,8 @@
 		$min = $_POST['min'];
 		$max = $_POST['max'];
 		header("location:search.php?city=$city&min=$min&max=$max&$action=search"); 
+		exit;
+	} else if($action == '') {
 		exit;
 	}
 ?>

@@ -38,6 +38,10 @@
                         <?php 
                             $action = 'read';
                             require "immobile.controller.php";
+
+                            if(empty($return)) { ?>
+                                <h2 style="text-align:center;">Nenhum registro foi encontrado :(</h2>
+                            <?php }
                             foreach ($return as $indice => $value): ?> 
                                 <div class="card" id="<?php echo $value->id; ?>">
                                     <img src="<?php echo $value->image1; ?>" alt="casa">
@@ -46,9 +50,11 @@
                                             <h1><?php echo $value->title; ?></h1>
                                             <h4><?php echo $value->state; ?>, <?php echo $value->city; ?></h4>
                                             <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
-                                            <p>
-                                                <?php echo $value->description ?>
-                                            </p>
+                                            <div class="description">
+                                                <p>
+                                                    <?php echo $value->description ?>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="card-footer">

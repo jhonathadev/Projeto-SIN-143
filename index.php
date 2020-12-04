@@ -7,9 +7,7 @@
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/carousel.css">
         <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="stylesheet" href="styles/modal.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
-
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>

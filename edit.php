@@ -73,13 +73,20 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="field">
-                                <label for="value_daily">Valor da diária (R$)</label>
-                                <input type="number" name="value_daily" value="<?php echo $value->value_daily?>" required>
-                            </div>
-                            <div class="field">
-                                <label for="phone">Telefone para contato</label>
-                                <input type="number" name="phone" value="<?php echo $value->phone ?>" required>
+
+                            <div class="field-group">
+                                <div class="field">
+                                        <label for="rooms">Nº de quartos</label>
+                                        <input type="number" name="rooms" min="1" value="<?php echo $value->rooms ?>" required>
+                                    </div>
+                                <div class="field">
+                                    <label for="value_daily">Valor da diária (R$)</label>
+                                    <input type="number" name="value_daily" min="1" value="<?php echo $value->value_daily ?>" required>
+                                </div>
+                                <div class="field">
+                                    <label for="phone">Telefone para contato</label>
+                                    <input type="number" name="phone" min="1" value="<?php echo $value->phone ?>" required>
+                                </div>
                             </div>
                             <div class="field">
                                 <label for="description">Descrição do Imóvel</label>

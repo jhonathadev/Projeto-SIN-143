@@ -12,6 +12,17 @@
     background-color: white;
 }
 
+#page-result .content .description {
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#page-result .content .description p {
+    word-wrap: break-word;
+}
+
 #page-result .content header nav {
     background-color: var(--primary-color);
     width: 100%;
