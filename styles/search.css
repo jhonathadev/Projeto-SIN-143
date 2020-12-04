@@ -59,6 +59,38 @@
     padding: 30px;
 }
 
+#page-search .content .search-bar {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+}
+
+#page-search .content .search-bar input[type=search] {
+    border-radius: 8px 0 0 8px;
+    width: 30%;
+}
+
+#page-search .content .search-bar input[type=number] {
+    width: 15%;
+    border-radius: 0;
+}
+
+#page-search .content .search-bar input[type=submit] {
+    width: 20%;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#page-search .content .search-bar input[type=submit]:hover {
+    background-color: var(--violet);
+}
+
 
 #page-search main .content form fieldset {
     border: none;
@@ -96,8 +128,10 @@
 
 #page-search main .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
+    justify-content: center;
+    align-items: center;
     padding: 30px;
 }
 
@@ -107,7 +141,7 @@
     border-radius: 8px 8px 0 0;
     object-fit: cover;
     opacity: 0.6;
-    transition: width  400ms;
+    transition: width 400ms;
 }
 
 #page-search main .card img:hover {
@@ -119,15 +153,31 @@
     background-color: #f5f5f5;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     border-radius: 8px;    
+    display: flex;
+    flex-direction: column;
 }
 
 #page-search main .card .card-body {
     background-color: #f5f5f5;
+    align-items: center;
+    height: 260px;
+    border-radius: 0 0 8px 8px;
+}
+
+#page-search main .card .card-body .card-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 300px;
-    max-height: 350px;
+    flex: 1;
+    height: 260px;
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#page-search main .card .card-body .card-content h1,h4,h3 {
+    text-align: center;
+    overflow: hidden;
+    line-height: 34px;
 }
 
 #page-search main .card .card-footer {
@@ -145,34 +195,10 @@
     border-radius: 0 0 8px 8px;
 }
 
-#page-search main .card h1 {
-    padding: 10px;
-    font-size: 26px;
-    line-height: 41px;
-    text-align: center;
-}
-
-#page-search main .card h3 {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 34px;
-    color: black;
-    text-align: center;
-}
 
 #page-search main .card strong {
     color: var(--violet);
     line-height: 24px;
-}
-
-#page-search main .card p {
-    font-size: 16px;
-    line-height: 26px;
-    padding: 16px;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    text-align: center;
-    overflow-y: scroll;
 }
 
 #page-search main .card a {

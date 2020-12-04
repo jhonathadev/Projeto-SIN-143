@@ -51,11 +51,11 @@
                             <div class="field-group">
                                 <div class="field">
                                     <label for="image1">Imagem 1</label>
-                                    <input type="text" name="image1" value="<?php echo $value->image1 ?>" required>
+                                    <input type="url" name="image1" value="<?php echo $value->image1 ?>" required>
                                 </div>
                                 <div class="field">
                                     <label for="image2">Imagem 2</label>
-                                    <input type="text" name="image2" value="<?php echo $value->image2 ?>" required>
+                                    <input type="url" name="image2" value="<?php echo $value->image2 ?>" required>
                                 </div>
                             </div>
                             <div class="field-group">

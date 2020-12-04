@@ -75,8 +75,8 @@
 			}
 		}
 
-		public function search($city) {
-			$query = 'select * from immobile where city ='.$city;
+		public function search($city, $min, $max) {
+			$query = "select * from immobile where city = '$city' AND value_daily >= '$min' AND value_daily <= '$max'";
 			$stmt = $this->connect->prepare($query);
 			$stmt->execute();
 			return $stmt->fetchAll(PDO::FETCH_OBJ);

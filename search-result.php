@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="styles/carousel.css">
         <link rel="stylesheet" href="styles/search-result.css">
         <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="stylesheet" href="styles/modal.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     </head>
@@ -21,7 +20,6 @@
                             <li class="align-left"><img src="imgs/logo.svg" alt="logotipo"></li>
                             <li><a href="index.php">INICIO</a></li>
                             <li><a href="about.php">SOBRE</a></li>
-                            <li><a id="search" href="#">BUSCAR</a></li>
                             <li><a href="contact.php">CONTATO</a></li>
                             <li>
                                 <label class="switch">
@@ -56,22 +54,27 @@
         
                             <div class="card">
                                 <h1><?php echo $value->title; ?></h1>
-                                <p>Valor: R$ <?php echo $value->value_daily; ?></p>
+                                <p>Diária: R$ <?php echo $value->value_daily; ?></p>
                                 <div class="card-group">
-                                    <p>Telefone: <?php echo $value->phone; ?></p>
+                                    <p>Nº quartos:</p>
 
-                                    <!-- <select name="quartos" id="quartos">
+                                    <select name="quartos" id="quartos">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
-                                    </select> -->
+                                    </select>
                                 </div>
+                                <p>Telefone:<?php echo $value->phone; ?></p>
                                 <div style="margin: 50px 0; text-align: center;">
                                     <a class="button" onclick="redireciona()">Alugar</a>
                                 </div>
-                                <p>Descrição do imóvel: <?php echo $value->description; ?></p>
                             </div>
                         </div>
+                        <div class="content">
+                            <h3>Descrição do imóvel:</h3> 
+                            <p><?php echo $value->description; ?></p>
+                        </div>
+                        <br>
                         <?php endforeach; ?>
 
                     </div>
@@ -81,39 +84,21 @@
                 <div class="footer-div">   
                     <p>Developed with <span>♥</span> by Jhonatha and Viviane</p>
                     <div style="display: inline;">
-                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="Facebook"></a>
+                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="github"></a>
                     </div>
                 </div>
             </footer>
-            <div id="modal" class="hide">
-                <div class="content-modal">
-                    <div class="header">
-                        <h1>Buscar Vaga</h1>
-                        <a href="#">Fechar</a>
-                    </div>
-                    <form action="search.php">
-                        <label for="search">Cidade</label>
-                        <div class="search field">
-                            <input type="text" name="search" placeholder="Digite a cidade">
-                            <button>
-                                <img src="imgs/search.svg" alt="Buscar">
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
         <script>
             function redireciona () {
                 showConfirmButton: false
-                alert("Alugado com sucesso!" + "\n" + "Você será redirecionado para a página inicial.")
+                alert("Imóvel reservado com sucesso!" + "\n" + "Você será redirecionado para a página inicial.")
                 setTimeout(() => {
                     window.location ="index.php"
                 } , 1500)
             }
         </script>
         <script src="scripts/carousel.js"></script>
-        <script src="scripts/modal.js"></script>
         <script src="scripts/switch-color.js"></script>
     </body>
 </html>

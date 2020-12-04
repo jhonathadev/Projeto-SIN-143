@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/carousel.css">
         <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="stylesheet" href="styles/modal.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     </head>
@@ -95,27 +94,10 @@
                 <div class="footer-div">   
                     <p>Developed with <span>♥</span> by Jhonatha and Viviane</p>
                     <div style="display: inline;">
-                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="Facebook"></a>
+                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="github"></a>
                     </div>
                 </div>
             </footer>
-            <div id="modal" class="hide">
-                <div class="content-modal">
-                    <div class="header">
-                        <h1>Buscar Vaga</h1>
-                        <a href="#">Fechar</a>
-                    </div>
-                    <form action="search.php">
-                        <label for="search">Cidade</label>
-                        <div class="search field">
-                            <input type="text" name="search" placeholder="Digite a cidade">
-                            <button>
-                                <img src="imgs/search.svg" alt="Buscar">
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
         <script src="scripts/ibge-api.js"></script>
         <script src="scripts/switch-color.js"></script>

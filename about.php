@@ -6,7 +6,6 @@
         <title>Tem vaga aí?</title>
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="stylesheet" href="styles/modal.css">
         <link rel="shortcut icon"  href="imgs/casa.svg">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     </head>
@@ -19,7 +18,6 @@
                             <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
                             <li><a href="index.php">INICIO</a></li>
                             <li><a href="#">SOBRE</a></li>
-                            <li><a id="search" href="#">BUSCAR</a></li>
                             <li><a href="contact.php">CONTATO</a></li>
                             <li>
                                 <label class="switch">
@@ -38,7 +36,6 @@
                         <div class="card">
                             <img src="imgs/logo.svg" alt="imagem-sobre">
                         </div>
-
                         <div class="card">
                             <p>
                                 Tem vaga ai? é um projeto proposto pelo professor Clausius Duque Reis da disciplina de Laboratório de Programação SIN 143 da Universidade Federal de Viçosa Campus Rio Paranaíba (UFV-CRP). E tem por objetivo oferecer vagas em republicas, apartamentos ou casas para serem alugadas de maneira rápida e simples.
@@ -62,25 +59,7 @@
                     </div>
                 </div>
             </footer>
-            <div id="modal" class="hide">
-                <div class="content-modal">
-                    <div class="header">
-                        <h1>Buscar Vaga</h1>
-                        <a href="#">Fechar</a>
-                    </div>
-                    <form action="search.php">
-                        <label for="search">Cidade</label>
-                        <div class="search field">
-                            <input type="text" name="search" placeholder="Digite a cidade">
-                            <button>
-                                <img src="imgs/search.svg" alt="Buscar">
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </body>
-    <script src="scripts/modal.js"></script>
     <script src="scripts/switch-color.js"></script>
 </html>

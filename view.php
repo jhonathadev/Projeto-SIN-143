@@ -33,9 +33,7 @@
             </div>
             <main>
                 <div class="content">
-                    <h1 class="section-title">Imóveis cadastrados</h1>
-                </div>
-                <div class="content">
+                        <h1 class="section-title">Imóveis cadastrados</h1>
                     <div class="cards">
                         <?php 
                             $action = 'read';
@@ -44,20 +42,23 @@
                                 <div class="card" id="<?php echo $value->id; ?>">
                                     <img src="<?php echo $value->image1; ?>" alt="casa">
                                     <div class="card-body">
-                                        <h1><?php echo $value->title; ?></h1>
-                                        <h4><?php echo $value->state; ?>, <?php echo $value->city; ?></h4>
-                                        <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
-                                        <p>
-                                            <?php echo $value->description ?>
-                                        </p>
+                                        <div class="card-content">
+                                            <h1><?php echo $value->title; ?></h1>
+                                            <h4><?php echo $value->state; ?>, <?php echo $value->city; ?></h4>
+                                            <h3><strong>R$<?php echo $value->value_daily ?></strong></h3>
+                                            <p>
+                                                <?php echo $value->description ?>
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="card-footer">
                                         <a href="search-result.php?id=<?php echo $value->id; ?>" style="color: #00a308;">Visualizar</a>
                                         <a href="edit.php?id=<?php echo $value->id; ?>" style="color: #f5bf42;">Editar</a>
-                                        <a href="view.php?action=delete&id=<?php echo $value->id; ?>" style="color: red;">Remover</a>
+                                        <a onclick="confirmation(<?php echo $value->id; ?>)" style="color: red;">Remover</a>
                                     </div>
                                 </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; 
+                        ?>
                     </div>
                 </div>
             </main>
@@ -65,14 +66,20 @@
                 <div class="footer-div">   
                     <p>Developed with <span>♥</span> by Jhonatha and Viviane</p>
                     <div style="display: inline;">
-                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="Facebook"></a>
+                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="github"></a>
                     </div>
                 </div>
             </footer>
         </div>
         <script>
-            function remove() {
-                alert("Removido com sucesso!");
+            function confirmation(id) {
+
+                confirm = confirm("Tem certeza que deseja apagar esse registro permanentemente?")
+                if(confirm == true) {
+                    window.location.href = "view.php?action=delete&id="+id
+                } else {
+                    console.log("error");
+                }
             }
         </script>
         <script src="scripts/switch-color.js"></script>

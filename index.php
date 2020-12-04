@@ -21,7 +21,6 @@
                             <li class="align-left"> <a href="#"><img src="imgs/logo.svg" alt="logotipo"></a></li>
                             <li><a href="#">INICIO</a></li>
                             <li><a href="about.php">SOBRE</a></li>
-                            <li><a id="search" href="#">BUSCAR</a></li>
                             <li><a href="contact.php">CONTATO</a></li>
                             <li><a href="login.php">LOGIN</a></li>
                             <li>
@@ -36,21 +35,29 @@
             </div>
             <main>
                 <div class="content">
-                    <div>
-                    <?php 
-                        $action = 'read';
+                    <?php $action = 'read';
                         require "image.controller.php";
                         foreach ($return as $indice => $value): ?> 
-                        <div class="mySlides fade">
-                            <img class="img-fix" src="<?php echo $value->image1; ?>" alt="imagem carousel">
-                        </div>
-                        <div class="mySlides fade">
-                            <img class="img-fix" src="<?php echo $value->image2; ?>" alt="imagem carousel">
-                        </div>
-                        <div class="mySlides fade">
-                            <img class="img-fix" src="<?php echo $value->image3; ?>" alt="imagem carousel">
-                        </div>
+                            <div class="mySlides fade">
+                                <img class="img-fix" src="<?php echo $value->image1; ?>" alt="imagem carousel">
+                            </div>
+                            <div class="mySlides fade">
+                                <img class="img-fix" src="<?php echo $value->image2; ?>" alt="imagem carousel">
+                            </div>
+                            <div class="mySlides fade">
+                                <img class="img-fix" src="<?php echo $value->image3; ?>" alt="imagem carousel">
+                            </div>
                     <?php endforeach ?>
+
+                    <div class="search-bar">
+                        <form method="post" action="immobile.controller.php?action=search">
+                            <fieldset>
+                                <input type="search" name="city" placeholder="Digite uma cidade" required>
+                                <input type="number" placeholder="Min (R$)" name="min" min="1" required>
+                                <input type="number" placeholder="Max (R$)" name="max" min="2" required>
+                                <input type="submit" value="Buscar">
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </main>
@@ -58,30 +65,13 @@
                 <div class="footer-div">   
                     <p>Developed with <span>♥</span> by Jhonatha and Viviane</p>
                     <div style="display: inline;">
-                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="Facebook"></a>
+                        <a href="https://github.com/jhonathadev/Projeto-SIN-143" target="_blank"><img src="imgs/git-logo.svg" alt="github"></a>
                     </div>
                 </div>
             </footer>
-            <div id="modal" class="hide">
-                <div class="content-modal">
-                    <div class="header">
-                        <h1>Buscar Vaga</h1>
-                        <a href="#">Fechar</a>
-                    </div>
-                    <form method="post" action="immobile.controller.php?action=search">
-                        <label for="city">Cidade</label>
-                        <div class="search field">
-                            <input type="text" name="city" placeholder="Digite a cidade" required>
-                            <button>
-                                <img src="imgs/search.svg" alt="Buscar">
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
+        <script src="scripts/validate.js"></script>
         <script src="scripts/carousel.js"></script>
-        <script src="scripts/modal.js"></script>
         <script src="scripts/switch-color.js"></script>
     </body>
 </html>

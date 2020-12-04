@@ -2,9 +2,9 @@
     require "conection.php";
 	require "immobile.model.php";
 	require "task-immobile.php";
+
 	$action = isset ($_GET['action']) ? $_GET['action'] : $action;
-
-
+	
 	if($action == 'insert') {
 		$immobile = new Immobile();
 		$immobile->__set('title',$_POST['title']);
@@ -18,7 +18,7 @@
 		$connect =  new Conection();
 		$register = new taskImmobile($connect, $immobile);
 		$register->insert();
-		header('location:register.php?insert=sucess');
+		header('location:view.php?insert=sucess');
 		exit;
 	} else if($action == 'read') {
 		$immobile = new Immobile();
@@ -50,20 +50,23 @@
 		header('location:view.php?update=sucess');
 		exit;
 	} else if($action == 'delete') {
-		$idUrl = $_GET['id'];
-		$immobile = new Immobile();
-		$connect = new Conection();
-		$remove =  new taskImmobile($connect,$immobile);
-		$remove->delete(id);
-		header('location:view.php?delete=sucess'); 
-		exit;
+		if(!empty($_GET['id'])) {
+			$idUrl = $_GET['id'];
+			$immobile = new Immobile();
+			$connect = new Conection();
+			$remove =  new taskImmobile($connect,$immobile);
+			$remove->delete($idUrl);
+			header('location:view.php?delete=sucess'); 
+			exit;
+		} else {
+			header('location:view.php?delete=error'); 
+			exit;
+		}
 	} else if($action == 'search') {
 		$city = $_POST['city'];
-		$immobile = new Immobile();
-		$connect =  new Conection();
-		$list = new taskImmobile($connect, $immobile);
-		$return = $list->search($city);
-		header('location:search.php?search=sucess'); 
+		$min = $_POST['min'];
+		$max = $_POST['max'];
+		header("location:search.php?city=$city&min=$min&max=$max&$action=search"); 
+		exit;
 	}
-		
 ?>
