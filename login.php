@@ -14,7 +14,7 @@
         <main>
             <div id="page-home-login">
                 <div class="content" id="login">
-                    <h1 class="section-title">Login</h1>
+                    <h1 class="section-title" style="color: white;">Login</h1>
                     <div class="login-div">
                         <div class="img-login">
                             <a href="index.php"><img src="imgs/logo.svg" alt="logo"></a>

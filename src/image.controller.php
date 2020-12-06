@@ -5,17 +5,15 @@
 	
 	$action = isset ($_GET['action']) ? $_GET['action'] : $action;
 
-    if($action == 'update'){
-		if((isset($_POST['image1']) && isset($_POST['image2']) && isset($_POST['image3']))) {
-			if((!empty($_POST['image1']) && !empty($_POST['image2']) && !empty($_POST['image3']))) {
+    if($action == 'insert'){
+		if(isset($_POST['image'])) {
+			if(!empty($_POST['image'])) {
 				$image = new Image();
-				$image->__set('image1',$_POST['image1']);
-				$image->__set('image2',$_POST['image2']);
-				$image->__set('image3',$_POST['image3']);
+				$image->__set('image',$_POST['image']);
 				$connect = new Conection();
 				$update = new taskImage($connect,$image);
-				$update->update();
-				header('location: register-image.php?update=1');
+				$update->insert();
+				header('location:admin/register-image.php?insert=sucess');
 			} else {
 				//caso ocorra algum erro redireciona para a página de erro
 				header('location:../error.php');

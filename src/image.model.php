@@ -1,9 +1,6 @@
 <?php
 	class Image {
-		private $id = 1;
-		private $image1;
-        private $image2;
-        private $image3;
+		private $image;
 
 		public function __get($attribute){
 			return $this->$attribute;

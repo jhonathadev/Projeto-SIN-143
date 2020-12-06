@@ -33,22 +33,14 @@
             <main>
                 <div class="content" id="contato">
                     <h1 class="section-title">Cadastrar Imagens</h1>
-                    <?php if( isset($_GET['update']) && $_GET['update'] == 1) { ?>
-                        <h5 align="center">Imagens inseridas com sucesso!</h5>
+                    <?php if( isset($_GET['insert']) && $_GET['insert'] == 'sucess') { ?>
+                        <h5 align="center">Imagem cadastrada com sucesso!</h5>
                     <?php } ?>
-                    <form method="post" action="image.controller.php?action=update">
+                    <form method="post" action="../image.controller.php?action=insert">
                         <fieldset>
                             <div class="field">
-                                <label for="image1">Link Imagem 1</label>
-                                <input type="url" name="image1" required>
-                            </div>
-                            <div class="field">
-                                <label for="image2">Link Imagem 2</label>
-                                <input type="url" name="image2" required>
-                            </div>
-                            <div class="field">
-                                <label for="image3">Link Imagem 3</label>
-                                <input type="url" name="image3" required>
+                                <label for="image">Link Imagem</label>
+                                <input type="url" name="image" required>
                             </div>
                             <div style="text-align: center;">
                                 <input class="button" type="submit" value="Cadastrar">

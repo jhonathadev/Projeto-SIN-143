@@ -37,16 +37,10 @@
                         require "src/image.controller.php";
                         foreach ($return as $indice => $value): ?> 
                             <div class="mySlides fade">
-                                <img class="img-fix" src="<?php echo $value->image1; ?>" alt="imagem carousel">
+                                <img class="img-fix" src="<?php echo $value->image; ?>" alt="imagem carousel <?php $value->id ?>">
                             </div>
-                            <div class="mySlides fade">
-                                <img class="img-fix" src="<?php echo $value->image2; ?>" alt="imagem carousel">
-                            </div>
-                            <div class="mySlides fade">
-                                <img class="img-fix" src="<?php echo $value->image3; ?>" alt="imagem carousel">
-                            </div>
-                    <?php endforeach ?>
-
+                        <?php endforeach 
+                    ?>
                     <div class="search-bar">
                         <form method="post" action="src/immobile.controller.php?action=search">
                             <fieldset>
