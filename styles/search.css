@@ -183,6 +183,11 @@
     text-overflow: ellipsis;
 }
 
+#page-search main .card .card-body .card-content h1 {
+    height: 35px;
+    overflow: hidden;
+}
+
 #page-search main .card .card-body .card-content h1,h4,h3 {
     text-align: center;
     overflow: hidden;
