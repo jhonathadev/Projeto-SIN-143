@@ -34,7 +34,7 @@
                     <h1 class="section-title">Sobre</h1>
                     <div class="cards">
                         <div class="card">
-                            <img src="imgs/logo.svg" alt="imagem-sobre" style="background-color: #33333b;">
+                            <img src="imgs/logo.svg" alt="imagem-sobre" style="background-color: #33333b42;">
                         </div>
                         <div class="card">
                             <p>
